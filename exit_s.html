@@ -1,3 +1,6 @@
+<!-- *************************************THIS IS THE PAGE FOR EXIT SHORT **************************************** -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,69 +20,75 @@
     #ot {
       position: absolute;
       color: goldenrod;
-      left: 110%;
-      font-size: 35px;
+      left: 105%;
+      font-size: 20px;
       top: 10%;
     }
 
     #Status {
       position: absolute;
       color: goldenrod;
-      left: 150%;
+      left: 125%;
       top: 10%;
-      font-size: 35px;
+      font-size: 20px;
 
     }
 
     #pl {
       position: absolute;
-      left: 180%;
-      font-size: 35px;
+      left: 145%;
+      font-size: 20px;
       top: 10%;
       color: goldenrod;
     }
 
     #exit {
       position: absolute;
-      right: -80%;
-      top: 80%;
+      left: 105%;
+      top: 50%;
+      width: 350px;
+      height: 60px;
+      text-align:center;
+      border-radius: 30px;
       font-size: 30px;
-      padding-left: 200px;
-      padding-right: 200px;
-
+      font-weight: bold;
     }
 
     #Back {
       position: absolute;
-      right: -80%;
-      top: 90%;
+      left: 105%;
+      top: 70%;
+      width: 350px;
+      height: 60px;
+      text-align:center;
+      border-radius: 30px;
       font-size: 30px;
-      padding-left: 195px;
-      padding-right: 195px;
+      font-weight: bold;
     }
 
     #txt {
       position: absolute;
-      left: 116%;
+      left: 105%;
       top: 20%;
-      color: red;
-      font-size: 35px;
+      color: greenyellow;
+      font-size: 20px;
     }
 
     #st {
       position: absolute;
-      left: 145%;
+      left: 125%;
       top: 20%;
       color: violet;
-      font-size: 35px;
+      font-size: 20px;
     }
 
     #l {
       position: absolute;
-      left: 180%;
-      font-size: 35px;
+      left: 145%;
+      font-size: 20px;
       color: aqua;
       top: 20%;
+
 
     }
   </style>
@@ -95,7 +104,7 @@
           viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
         </svg>
-        <span class="ml-3 text-xl">KRYPTON</span>
+        <span class="ml-3 text-xl" onclick="location.href='index.html'">KRYPTON</span>
       </a>
       <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
         <a href="index.html" class="mr-5 hover:text-white">HOME</a>
@@ -103,14 +112,14 @@
         <a href="features.html" class="mr-5 hover:text-white">FEATURES</a>
         <a href="contact.html" class="mr-5 hover:text-white">CONTACT US</a>
       </nav>
-      <button
+      <!-- <button
         class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0">Learn
         More
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
           class="w-4 h-4 ml-1" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
-      </button>
+      </button> -->
     </div>
   </header>
   <!-- TradingView Widget BEGIN -->
@@ -123,7 +132,7 @@
           new TradingView.widget(
             {
               "width": 800,
-              "height": 900,
+              "height": 500,
               "symbol": "BINANCE:ETHUSDT",
               "interval": "5",
               "timezone": "Asia/Kolkata",
@@ -149,8 +158,8 @@
     <a id="txt">SHORT</a>
     <a id="l">___</a>
     <a id="st">_____</a>
-    <button id="exit" style="color:red; background-color:aqua;" onclick="exit()">EXIT</button>
-    <button id="Back" style="color: cornflowerblue; background-color: chartreuse;"
+    <button id="exit" style="color:black; background-color:white;" onclick="exit()">EXIT</button>
+    <button id="Back" style="color:black; background-color:white;"
       onclick="location.href='papertrading.html'">BACK</button>
     <script>
       function exit() {

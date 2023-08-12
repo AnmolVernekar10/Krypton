@@ -1,3 +1,5 @@
+<!-- *********************************** THIS IS FOR THE PAPER TRADING PAGE ************************************ -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +10,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krypton.com</title>
     <style>
+      /* This is for the long green button */
       #buy{
         position: absolute;
-        left:1%;
+        left:2%;
         bottom: 15%;
-        padding-left: 80px;
+        /* padding-left: 80px;
         padding-right: 80px;
         padding-top: 5px;
-        padding-bottom: 5px;
+        padding-bottom: 5px; */
+        border-radius: 10px;
+        width: 115px;
+        height: 30px;
+        text-align:center;
+        font-size: 15px;
+        background-color: green;
+        color: white;
+      }
+      #add_money{
+        position: absolute;
+        left:84%;
+        top: 55%;
+        border-radius: 10px;
+        width: 160px;
+        height: 40px;
+        text-align:center;
+        font-size: 25px;
+        font-weight: bold;
+        background-color: white;
+        color: black;
 
       }
+      /* This is for the short red button */
+
       #sell{
         position: absolute;
         bottom: 15%;
-        left: 14%;
-        padding-top: 4px;
+        left: 11%;
+        /* padding-top: 4px;
         padding-left: 80px;
         padding-right: 80px;
-        padding-bottom: 5px;      
+        padding-bottom: 5px;   */
+        border-radius: 10px;
+        width: 115px;
+        height: 30px;
+        text-align:center;
+        font-size: 15px;
+        background-color: rgb(216, 47, 13);
+        color: white;    
       }
 
       #stock-price{
@@ -33,65 +65,108 @@
         left: 2%;
         color: greenyellow;
       }
-      #price{
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        color: blue;
-        height: 40px;
-        font-size: 20px;
-      }
+      
+      /* This is for the Price,Target,stoploss,amount yellow  */
       #p_l{
         position: absolute;
-        left:1%;
+        left:1.75%;
         top: 50%;
-        color: gold;
-        font-size:30px;
+        color:yellow;
+        font-size:15px;
       }
       #t_l{
         position: absolute;
-        left:1%;
+        left:1.75%;
         top:55%;
-        color: gold;
-        font-size:30px ;
-      }
-      #target{
-        position: absolute;
-        left: 10%;
-        top: 55%;
-        color: blue;
-        height: 40px;
-        font-size: 20px;
-
-      }
-      #wal{
-        position: absolute;
-        color: blue;
-        height: 40px;
-        font-size: 20px;
-        left: 10%;
-        top: 65%;
+        color: yellow;
+        font-size:15px ;
       }
       #s_l{
         position: absolute;
-        color: gold;
-        font-size: 30px;
-        left: 1%;
+        color: yellow;
+        font-size: 15px;
+        left: 1.75%;
         top: 60%;
+      }
+      #amt{
+        position: absolute;
+        top: 65%;
+        left: 1.75%;
+        color: yellow;
+        font-size: 15px;
+      }
+      #moneyadd{
+        position: absolute;
+        top: 35%;
+        left: 82%;
+        color: white;
+        font-size: 23px;
+        font-weight: bold;
+      }
+      /* //////////////// */
+      
+      /* This is for the white space for values of price,target,stoploss,amt */
+      #price{
+        position: absolute;
+        left: 7.5%;
+        top: 50%;
+        color: black;
+        height: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        width: 130px;
+        border-radius:10px;
+      }
+      #target{
+        position: absolute;
+        left: 7.5%;
+        top: 55%;
+        color: black;
+        height: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        width: 130px;
+        border-radius:10px;
       }
       #loss{
         position: absolute;
-        left: 10%;
+        left: 7.5%;
         top: 60%;
-        color: blue;
-        height: 40px;
+        color: black;
+        height: 25px;
         font-size: 20px;
+        font-weight: 500;
+        width: 130px;
+        border-radius:10px;
       }
+      #wal{
+        position: absolute;
+        color: black;
+        height: 25px;
+        font-size: 20px;
+        left: 7.5%;
+        top: 65%;
+        font-weight: 500;
+        width: 130px;
+        border-radius:10px;
+      }
+      #mon{
+        position: absolute;
+        color:  black;
+        height: 35px;
+        font-size: 20px;
+        left: 85%;
+        top: 45%;
+        font-weight: 500;
+        width: 130px;
+        border-radius:10px;
+      }
+      /* //////////// */
       #mar{
         position: absolute;
-        left:1%;
-        color: violet;
-        font-size: 30px;
+        left:2%;
+        color: yellow;
+        font-size: 20px;
         bottom: 22%;
 
       }
@@ -111,68 +186,76 @@
         top: 30%;
         right: 2%;
       }
-      #amt{
-        position: absolute;
-        top: 65%;
-        left: 1%;
-        color: gold;
-        font-size: 30px;
-      }
+      
+      /* This is for the wallet green image */
       #usdt{
         position: absolute;
-        height: 35px;
-        top: 15%;
-        left: 1%;
+        height: 45px;
+        top: 25%;
+        left: 2%;
+
 
       }
+      /* This is for the **value */
       #money{
         position: absolute;
-        top: 14.57%;
-        left: 4%;
+        top: 25%;
+        left: 6%;
         font-size: 26px;
-        color:#23a47c;
+        color:#2cb68a;
       }
-      #sym{
+      /* #sym{
         position: absolute;
         top: 14.57%;
         font-size: 26px;
-        color: goldenrod;
+        color: rgb(202, 169, 51);
         left: 3.2%;
-      }
+      } */
+
+      /* This is for the available usdt text */
       #us{
         position: absolute;
-        top: 17.7%;
-        font-size: 15px;
-        color: white;
-        left: 3%;
+        top: 30%;
+        font-size: 12px;
+        color: rgb(255, 253, 253);
+        left: 5.5%;
       }
+
+      /* This is the show wallet button */
       #ko{
         position: absolute;
-        top: 20%;
+        top: 35%;
         padding-top: 2px;
         padding-bottom: 2px;
         padding-right: 20px;
         padding-left: 20px;
         left: 3%;
-        color: white;
-        background-color: goldenrod;
+        color: rgb(10, 9, 9);
+        background-color: rgb(239, 237, 232);
         font-size: 20px;
+        border-radius:10px;
       }
+
+      /* This is for the market button */
       #market{
         color: black;
-        background-color: skyblue;
+        background-color:white;
         font-size: 20px;
         position: absolute;
         bottom: 22%;
-        left: 15%;
+        left: 12%;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 2px;
         padding-bottom: 2px;
+        border-radius: 10px;
       }
+
+      
 
     </style>
 </head>
+
 <body style="background-color:#1b212c ;">
     <header class="text-gray-400 bg-gray-900 body-font">
         <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -180,7 +263,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
               <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
             </svg>
-            <span class="ml-3 text-xl">KRYPTON</span>
+            <span class="ml-3 text-xl" onclick="location.href='index.html'">KRYPTON</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
             <a href="index.html" class="mr-5 hover:text-white">HOME</a>
@@ -188,11 +271,11 @@
             <a href="features.html" class="mr-5 hover:text-white">FEATURES</a>
             <a href="contact.html"  class="mr-5 hover:text-white">CONTACT US</a>
           </nav>
-          <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" >Learn More
+          <!-- <button class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" >Learn More
             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
               <path d="M5 12h14M12 5l7 7-7 7"></path>
             </svg>
-          </button>
+          </button> -->
         </div>
       </header>
 <!-- TradingView Widget BEGIN -->
@@ -232,9 +315,9 @@
     </script>
   </div>
   <!-- TradingView Widget END -->
-  <p style="color:aqua ; font-size: xx-large; padding-left: 770px;"><u>PAPER TRADING</u></p><br>
+  <!--  <p style="color:aqua ; font-size: 40px; padding-left: 500px; text-decoration:solid;"><u>PAPER TRADING</u></p><br> -->
   <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
+<div class="tradingview-widget-container" >
     <div id="tradingview_24c54"></div>
     <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/ETHUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -264,20 +347,20 @@
   <!-- TradingView Widget END -->
   <!-- <p>Etherum Current Price is <a id="stock-price">---</a></p>   -->
 <!-- TradingView Widget BEGIN -->
-<div class="ft">
+<!-- <div class="ft">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/ETHUSDT/technicals/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
   {
   "interval": "5m",
-  "width": 425,
+  "width": 300,
   "isTransparent": false,
-  "height": 450,
+  "height": 300,
   "symbol": "BINANCE:ETHUSDT",
   "showIntervalTabs": true,
   "locale": "in",
   "colorTheme": "dark"
-}
+} -->
   </script>
 </div>
 <!-- TradingView Widget END -->
@@ -286,18 +369,17 @@
 
 <form action="exit_l.html">
 
-
 <label for="html" id="p_l">PRICE </label>
 
-<input type="text" placeholder=@Price_to_buy_Eth id="price">
+<input type="text" placeholder=@Price id="price">
 
 <label for="html" id="t_l" >TARGET </label>
 
-<input type="text" placeholder=@Add_Target_Price id="target">
+<input type="text" placeholder=@Target id="target">
 
 <label for="html" id="s_l">STOPLOSS</label>
 
-<input type="text" id="loss" placeholder="@Add_Stop_loss">
+<input type="text" id="loss" placeholder="@Stop_loss">
 
 <label for="html" id="mar">MARGIN :<a style="color:aqua;"> 10x</a></label>
 
@@ -305,9 +387,11 @@
 
 <label id ="amt" for="html">AMOUNT</label>
 
-<input type="text" id="wal" placeholder="@Amount_to_trade" required>
+<input type="text" id="wal" placeholder="@Amount" required>
 
-<label id="sym">₮</label>
+<label id ="moneyadd" for="mon">Add Money to Wallet</label>
+<input type="text" id="mon">
+<!-- <label id="sym">₮</label> -->
 
 <label id="money">*****</label>
 <button type="button" onclick="add()" id = "ko">SHOW WALLET</button>
@@ -321,12 +405,15 @@
   }
 </script>
 
-
-<button id="buy" type="submit" style="color:goldenrod; background-color: green; font-size: x-large;" onclick="save_data()" >LONG</button>
+<!-- *************************************************************** -->
+<button id="add_money" type="submit" onclick="wallet_money_add()" >Add</button>
+<!-- <script src="back.js"></script> -->
+<!-- ***************************************************************  -->
+<button id="buy" type="submit" onclick="save_data()" >LONG</button>
 </form>
 
 <form action="exit_s.html">
-  <button id ="sell" type="submit" style="color: goldenrod; background-color: red ;font-size: x-large;" onclick="save_data()">SHORT</button>
+  <button id ="sell" type="submit" onclick="save_data()">SHORT</button>
 </form>
 
 <button id="market" onclick="fg()">MARKET</button>
@@ -338,6 +425,23 @@
   }
 </script>
 
+<script>
+  function wallet_money_add()
+  {
+        let price = document.getElementById("price").value;
+        let inputValue = document.getElementById("mon").value;
+        let target = document.getElementById("target").value;
+        let stoploss = document.getElementById("loss").value;
+        let amt = document.getElementById("wal").value;
+        localStorage.setItem("Amt",inputValue)
+        localStorage.setItem("profit",0)
+        localStorage.setItem("pro",0)
+        localStorage.setItem("price",price)
+        localStorage.setItem("target",target)
+        localStorage.setItem("stoploss",stoploss)  
+        localStorage.setItem("Amount",amt)
+  }
+</script>
 
 <script>
   function save_data(){
@@ -354,7 +458,7 @@
 </script>
 <br><br><br><br>
 <!-- TradingView Widget BEGIN -->
-<div id ="pro">
+<!-- <div id ="pro">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/ETHUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
@@ -366,7 +470,9 @@
   "locale": "in"
 }
   </script>
-</div>
+</div> -->
+
+
 <!-- TradingView Widget END -->
       <footer class="text-gray-400 bg-gray-900 body-font">
         <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
